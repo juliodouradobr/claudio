@@ -61,3 +61,15 @@ node scripts/generate-sounds.js               # regenera os sons
 ```
 
 Os ícones/splash em `assets/` são os padrões do template — troque por suas imagens quando quiser.
+
+## 📲 Instalar no celular (sem depender do PC)
+
+**Android (arquivo .apk, uso pessoal):**
+```bash
+npm install
+npx eas-cli@latest login            # conta gratuita em expo.dev
+npx eas-cli@latest build --platform android --profile preview
+```
+Ao terminar (uns 10–20 min, na nuvem), o terminal mostra um link/QR Code: abra no celular, baixe o `.apk` e instale (permita "instalar apps desconhecidos"). Depois disso o app roda sozinho, e os alarmes ficam mais confiáveis que no Expo Go.
+
+**iPhone:** exige conta paga de desenvolvedor da Apple (US$ 99/ano) para instalar. Sem ela, use o Expo Go.
